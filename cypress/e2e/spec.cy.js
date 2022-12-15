@@ -31,7 +31,7 @@ describe('My First Test', () => {
     
     cy.get('input#mw-search').type('BTCUSD', {delay: 0})
 
-    cy.get('a.j-result-link', {timeout: 7000}).first().click()
+    cy.get('a.j-result-link', {timeout: 10000}).first().click()
 
     cy.get('table.c2 .value').first().invoke('text').then(parseFloat).should('be.gt', 0)
 
